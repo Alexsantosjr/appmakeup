@@ -87,12 +87,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **Website**  (HTML, CSS, JS, NUNJUCKS, SQL, EXPRESS, POSTGRES)
 
--   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
--   **[React Icons](https://react-icons.github.io/react-icons/)**
--   **[Axios](https://github.com/axios/axios)**
--   **[Leaflet](https://react-leaflet.js.org/en/)**
--   **[React Leaflet](https://react-leaflet.js.org/)**
--   **[React Dropzone](https://github.com/react-dropzone/react-dropzone)**
+-   **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)**
+-   **[CSS](https://www.w3schools.com/css/)**
+-   **[NUNJUCKS](https://mozilla.github.io/nunjucks/)**
+-   **[SQL](https://www.postgresql.org/docs/9.4/sql.html)**
+-   **[JS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
+-   **[EXPRESS](https://expressjs.com/pt-br/)**
 
 > Veja o arquivo  [package.json](https://github.com/Alexsantosjr/appmakeup/blob/master/web/package.json)
 
