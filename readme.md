@@ -114,8 +114,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <sub><b>Alexandre Santos</b></sub></a> 🚀</a>
  <br />
 
-[![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/alexsantosjr) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/alexandresantosjr/) 
-[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:alexsantsjrr@gmail.com)
+[![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/alexsantosjr)](https://twitter.com/alexsantosjr) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alexandresantosjr/)](https://www.linkedin.com/in/alexandresantosjr/) 
+[![Gmail Badge](https://img.shields.io/badge/-alexsantsjrr@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alexsantsjrr@gmail.com)](mailto:alexsantsjrr@gmail.com)
 
 ---
 
