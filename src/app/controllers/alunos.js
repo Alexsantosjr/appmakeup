@@ -32,19 +32,13 @@ module.exports = {
        })
     },
     edit(req, res){
-        const { id } = req.params
-
-        const foundAluno = data.alunos.find(function(aluno){
-            return aluno.id == id
+        Aluno.find(req.params.id, function(aluno){
+            if(!aluno) return res.send("Aluno não encontrado!")
+ 
+            aluno.created_at =  date(aluno.created_at).format
+ 
+            return res.render("makeup/edit", { aluno })
         })
-
-        if(!foundAluno) return res.send ("Aluno não encontrado")
-    
-        const aluno = {
-            ...foundAluno,
-            created_at: new Intl.DateTimeFormat("pt-BR").format(foundAluno.created_at)
-        }
-        return res.render("makeup/edit", {aluno})
     },
     put(req, res){
         const { id } = req.body
