@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form action="/makeup" class="card" method="post">
+        <section class="avatar" style="background: url(https://scontent.fsdu1-1.fna.fbcdn.net/v/t1.0-9/71182165_1880554682048291_5980082961372938240_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=gEhQ9K-QYWQAX91hQRk&_nc_ht=scontent.fsdu1-1.fna&oh=eeaf540d98f03290e2ac0dcd487e1e90&oe=5F0E8EF7) no-repeat center center / cover"></section>
+
+        <section class="details-n1">
+            <h3>Cadastre-se</h3>
+
+            <div class="item">
+                <div>Sua foto</div>
+                <div>
+                    <input type="url" name="avatar_url" placeholder="http://" value="">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Nome</div>
+                <div>
+                    <input type="text" name="name" placeholder="Digite seu nome" value="">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Email</div>
+                <div>
+                    <input type="email" name="email" placeholder="Digite seu email" value="">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>
+                    <span>
+                        <input type="radio" name="gender" value="M" {% if instructor.gender == "M" %} checked="checked" {% endif %}>Masculino</span>
+                    <span>
+                        <input type="radio" name="gender" value="F" {% if instructor.gender == "F" %} checked="checked" {% endif %}>Feminino</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Tipos de Técnincas</div>
+                <div>
+                    <select name="tecnicas">
+                        <option value="Escolha uma técninca" selected="selected">Escolha uma técninca</option>
+                        <option value="Esfumado Infinito">Esfumado Infinito</option>
+                        <option value="Cut Crease">Cut Crease</option>
+                        <option value="Smokey Eye">Smokey Eye</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="button-n1">Cadastrar</button>
+
+        </div>
+    </section>
+
+</form>
+
+{% endblock content %}

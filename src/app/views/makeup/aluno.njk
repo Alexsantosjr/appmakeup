@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar" style="background: url({{aluno.avatar_url}}) no-repeat center center / cover"></section>
+
+        <section class="details-n1">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Nome</div>
+                <div>{{aluno.name}}</div>
+            </div>
+
+            <div class="item">
+                <div>Email</div>
+                <div>{{aluno.email}}</div>
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>{{ "Masculino" if aluno.gender == "M" else "Feminino" }}</div>
+            </div>
+
+            <div class="item">
+                <div>Tipos de Técnincas</div>
+                <div>
+                    <span>{{aluno.tecnicas}}</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Desde</div>
+                <div>{{ aluno.created_at }}</div>
+            </div>
+
+            <a href="{{ aluno.id }}/edit" class="button-n1">Editar</a>
+
+        </section>
+    </div>
+
+{% endblock %}

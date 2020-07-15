@@ -1,0 +1,88 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="card">
+        <section class="avatar" style="background: url({{aluno.avatar_url}}) no-repeat center center / cover"></section>
+
+    <form  method="post" action="/makeup?_method=PUT">
+        <section class="details-n1">
+            <h3>Editar Aluno</h3>
+
+            <div class="item">
+                <div>Sua foto</div>
+                <div>
+                    <input type="url" name="avatar_url" placeholder="http://" value="{{aluno.avatar_url}}">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Nome</div>
+                <div>
+                    <input type="text" name="name" placeholder="Digite seu nome" value="{{aluno.name}}">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Email</div>
+                <div>
+                    <input type="email" name="email" placeholder="Digite seu email" value="{{aluno.email}}">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>
+                    <span>
+                        <input type="radio" name="gender" value="M" {% if aluno.gender == "M" %} checked="checked" {% endif %}>Masculino</span>
+                    <span>
+                        <input type="radio" name="gender" value="F" {% if aluno.gender == "F" %} checked="checked" {% endif %}>Feminino</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Tipos de Técnincas</div>
+                <div>
+                    <select name="tecnicas">
+                        <option value="Esfumado Infinito"{% if aluno.tecnicas == "Esfumado Infinito"%}selected{% endif %}>Esfumado Infinito</option>
+                        <option value="Cut Crease"{% if aluno.tecnicas == "Cut Crease"%}selected{% endif %}>Cut Crease</option>
+                        <option value="Smokey Eye"{% if aluno.tecnicas == "Smokey Eye"%}selected{% endif %}>Smokey Eye</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Desde</div>
+                <div>{{ aluno.created_at }}</div>
+            </div>
+
+            <input 
+                type="hidden" 
+                name="id"
+                value={{aluno.id}}>
+
+            <button type="submit" class="button-n1">Salvar</button>
+        </form>
+
+        <form class="form-delete" action="/makeup?_method=DELETE" method="post">
+            <input 
+                type="hidden" 
+                name="id"
+                value={{aluno.id}}>
+
+            <button class="button-n2" type="submit">Apagar</button>
+        </form>
+        </section>
+        </div>
+    
+        <script>
+            const formDelete = document.querySelector(".form-delete")
+            formDelete.addEventListener("submit", function(event){
+                const confirmation = confirm("Deseja Deletar?")
+                if(!confirmation){
+                    event.preventDefault()
+                }
+            })
+        </script>
+
+{% endblock %}
