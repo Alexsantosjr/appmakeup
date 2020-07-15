@@ -46,5 +46,28 @@ module.exports = {
 
                 callback(results.rows[0])
         })
+    },
+    update(data, callback){
+        const query = `
+            UPDATE alunos SET
+                avatar_url=($1),
+                name=($2),
+                gender=($3),
+                tecnicas=($4)
+            WHERE id = $5
+        `
+        const values = [
+            data.avatar_url,
+            data.name,
+            data.gender,
+            data.tecnicas,
+            data.id
+        ]
+
+        db.query(query, values, function(err, results){
+            if(err) throw `Database error! ${err}`
+
+            callback()
+        })
     }
 }

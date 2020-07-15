@@ -41,30 +41,16 @@ module.exports = {
         })
     },
     put(req, res){
-        const { id } = req.body
-        let index = 0
-    
-        const foundAluno = data.alunos.find(function (aluno, foundIndex){
-            if (id == aluno.id){
-            index = foundIndex
-            return true
-            }
-        })
+        const keys = Object.keys(req.body)
 
-        if(!foundAluno) return res.send("Aluno not found")
-    
-        const aluno = {
-            ...foundAluno,
-            ...req.body,
-            id: Number(req.body.id)
+        for(key of keys){
+            if(req.body[key] == ""){
+                return res.send("Please, fill all fields")
+            }
         }
 
-        data.alunos[index] = aluno
-        
-        fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
-            if(err) return res.send("Write error!")
-    
-            return res.redirect(`/aluno/${id}`)
+        Aluno.update(req.body, function(){
+            return res.redirect(`/aluno/${req.body.id}`)
         })
     },
     delete(req, res){
