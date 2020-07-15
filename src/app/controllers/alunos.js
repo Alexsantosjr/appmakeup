@@ -54,18 +54,8 @@ module.exports = {
         })
     },
     delete(req, res){
-        const { id } = req.body
-
-        const filterAluno = data.alunos.filter(function(aluno){
-            return aluno.id != id
-        })
-    
-        data.alunos = filterAluno
-    
-        fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
-            if (err) return res.send("Write file error")
-    
-            return res.redirect("/makeup/maquiadoras")
+        Aluno.delete(req.body.id, function(){
+            return res.redirect("/makeup")
         })
     },
     makes(req, res){
